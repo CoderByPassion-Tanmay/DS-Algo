@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.*;
+// import java.util.Integer.MAX_VALUE;
 
 // Span of Array  
 public class Span{
@@ -16,22 +17,27 @@ public class Span{
     {
     arr[i] = sc.nextInt();
     }
-        int max = findMax(arr);
-     System.out.println("MAx ="+max);
+         findMaxMin(arr);
+     // System.out.println("MAx ="+max);
 
        
   }
-  public static int findMax(int arr[]){
-    int max = 0;
+  public static void findMaxMin(int arr[]){
+    int max = Integer.MIN_VALUE;
+    int min =Integer.MAX_VALUE ;
+    
    for(int i=0 ;i<arr.length;i++)
     {
     if (arr[i] > max)
     {
       max = arr[i];
     }
+     if(arr[i] < min){
+      min =arr[i];
+    }
       
     }
-
-    return max;
+System.out.println("max => "+max+"min => "+min);
+    // return max;
   }
 }
